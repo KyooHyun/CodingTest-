@@ -1,0 +1,32 @@
+def solution(quiz):    
+    answer = []
+    for i in quiz:
+        parts = i.split()
+        x = int(parts[0])
+        op = parts[1]
+        y = int(parts[2])
+        z = int(parts[4])
+        if op == '+':
+            if x + y == z:
+                answer.append("O")
+            else:
+                answer.append("X")
+        else:
+            if x-y == z:
+                answer.append("O")
+            else:
+                answer.append("X")
+    
+    return answer
+
+# 난 이렇게풀었는데, 
+
+
+def solution(quiz):
+    answer = []
+    for q in quiz:
+        x, op, y, _, z = q.split()
+        x, y, z = int(x), int(y), int(z)
+        result = x + y if op == '+' else x - y
+        answer.append("O" if result == z else "X")
+    return answer
