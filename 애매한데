@@ -1,0 +1,8 @@
+from collections import Counter
+
+arr = ['A', 'B', 'A', 'C', 'B', 'A']
+counter = Counter(arr)
+print(counter) # Counter({'A': 3, 'B': 2, 'C': 1})
+
+# 가장 많이 등장한 요소 상위 N개 추출 (가장 중요!)
+print(counter.most_common(1)) # [('A', 3)]
